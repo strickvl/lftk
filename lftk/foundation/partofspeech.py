@@ -4,444 +4,376 @@ class PartOfSpeech:
     Parent class for features that are in the 'partofspeech' family.
     """
     
-    def total_number_of_adjectives(
-        SE: object
-        ) -> float:
+    def total_number_of_adjectives(self) -> float:
         """
         returns the number of adjectives
         """
         try: 
-            return SE.total_number_of_adjectives_
+            return self.total_number_of_adjectives_
         except AttributeError:
             pos_list = [token.pos_ for token in SE.doc]
-            SE.total_number_of_adjectives_ = pos_list.count("ADJ")
-            return SE.total_number_of_adjectives_
+            self.total_number_of_adjectives_ = pos_list.count("ADJ")
+            return self.total_number_of_adjectives_
 
-    def total_number_of_unique_adjectives(
-        SE: object
-        ) -> float:
+    def total_number_of_unique_adjectives(self) -> float:
         """
         returns the number of unique adjectives
         """
         try: 
-            return SE.total_number_of_unique_adjectives_
+            return self.total_number_of_unique_adjectives_
         except AttributeError:
             pos_list = [token.lemma_ for token in SE.doc if token.pos_=="ADJ"]
-            SE.total_number_of_unique_adjectives_ = len([*set(pos_list)])
-            return SE.total_number_of_unique_adjectives_
+            self.total_number_of_unique_adjectives_ = len([*set(pos_list)])
+            return self.total_number_of_unique_adjectives_
 
-    def total_number_of_adpositions(
-        SE: object
-        ) -> float:
+    def total_number_of_adpositions(self) -> float:
         """
         returns the number of adpositions
         """
         try: 
-            return SE.total_number_of_adpositions_
+            return self.total_number_of_adpositions_
         except AttributeError:
             pos_list = [token.pos_ for token in SE.doc]
-            SE.total_number_of_adpositions_ = pos_list.count("ADP")
-            return SE.total_number_of_adpositions_
+            self.total_number_of_adpositions_ = pos_list.count("ADP")
+            return self.total_number_of_adpositions_
         
-    def total_number_of_unique_adpositions(
-        SE: object
-        ) -> float:
+    def total_number_of_unique_adpositions(self) -> float:
         """
         returns the number of unique adpositions
         """
         try: 
-            return SE.total_number_of_unique_adpositions_
+            return self.total_number_of_unique_adpositions_
         except AttributeError:
             pos_list = [token.lemma_ for token in SE.doc if token.pos_=="ADP"]
-            SE.total_number_of_unique_adpositions_ = len([*set(pos_list)])
-            return SE.total_number_of_unique_adpositions_
+            self.total_number_of_unique_adpositions_ = len([*set(pos_list)])
+            return self.total_number_of_unique_adpositions_
 
-    def total_number_of_adverbs(
-        SE: object
-        ) -> float:
+    def total_number_of_adverbs(self) -> float:
         """
         returns the number of adverbs
         """
         try: 
-            return SE.total_number_of_adverbs_
+            return self.total_number_of_adverbs_
         except AttributeError:
             pos_list = [token.pos_ for token in SE.doc]
-            SE.total_number_of_adverbs_ = pos_list.count("ADV")
-            return SE.total_number_of_adverbs_
+            self.total_number_of_adverbs_ = pos_list.count("ADV")
+            return self.total_number_of_adverbs_
         
-    def total_number_of_unique_adverbs(
-        SE: object
-        ) -> float:
+    def total_number_of_unique_adverbs(self) -> float:
         """
         returns the number of unique adverbs
         """
         try: 
-            return SE.total_number_of_unique_adverbs_
+            return self.total_number_of_unique_adverbs_
         except AttributeError:
             pos_list = [token.lemma_ for token in SE.doc if token.pos_=="ADV"]
-            SE.total_number_of_unique_adverbs_ = len([*set(pos_list)])
-            return SE.total_number_of_unique_adverbs_
+            self.total_number_of_unique_adverbs_ = len([*set(pos_list)])
+            return self.total_number_of_unique_adverbs_
 
-    def total_number_of_auxiliaries(
-        SE: object
-        ) -> float:
+    def total_number_of_auxiliaries(self) -> float:
         """
         returns the number of auxiliaries
         """
         try: 
-            return SE.total_number_of_auxiliaries_
+            return self.total_number_of_auxiliaries_
         except AttributeError:
             pos_list = [token.pos_ for token in SE.doc]
-            SE.total_number_of_auxiliaries_ = pos_list.count("AUX")
-            return SE.total_number_of_auxiliaries_
+            self.total_number_of_auxiliaries_ = pos_list.count("AUX")
+            return self.total_number_of_auxiliaries_
         
-    def total_number_of_unique_auxiliaries(
-        SE: object
-        ) -> float:
+    def total_number_of_unique_auxiliaries(self) -> float:
         """
         returns the number of unique auxiliaries
         """
         try: 
-            return SE.total_number_of_unique_auxiliaries_
+            return self.total_number_of_unique_auxiliaries_
         except AttributeError:
             pos_list = [token.lemma_ for token in SE.doc if token.pos_=="AUX"]
-            SE.total_number_of_unique_auxiliaries_ = len([*set(pos_list)])
-            return SE.total_number_of_unique_auxiliaries_
+            self.total_number_of_unique_auxiliaries_ = len([*set(pos_list)])
+            return self.total_number_of_unique_auxiliaries_
 
-    def total_number_of_coordinating_conjunctions(
-        SE: object
-        ) -> float:
+    def total_number_of_coordinating_conjunctions(self) -> float:
         """
         returns the number of coordinating_conjunctions
         """
         try: 
-            return SE.total_number_of_coordinating_conjunctions_
+            return self.total_number_of_coordinating_conjunctions_
         except AttributeError:
             pos_list = [token.pos_ for token in SE.doc]
-            SE.total_number_of_coordinating_conjunctions_ = pos_list.count("CCONJ")
-            return SE.total_number_of_coordinating_conjunctions_
+            self.total_number_of_coordinating_conjunctions_ = pos_list.count("CCONJ")
+            return self.total_number_of_coordinating_conjunctions_
 
-    def total_number_of_unique_coordinating_conjunctions(
-        SE: object
-        ) -> float:
+    def total_number_of_unique_coordinating_conjunctions(self) -> float:
         """
         returns the number of unique coordinating_conjunctions
         """
         try: 
-            return SE.total_number_of_unique_coordinating_conjunctions_
+            return self.total_number_of_unique_coordinating_conjunctions_
         except AttributeError:
             pos_list = [token.lemma_ for token in SE.doc if token.pos_=="CCONJ"]
-            SE.total_number_of_unique_coordinating_conjunctions_ = len([*set(pos_list)])
-            return SE.total_number_of_unique_coordinating_conjunctions_
+            self.total_number_of_unique_coordinating_conjunctions_ = len([*set(pos_list)])
+            return self.total_number_of_unique_coordinating_conjunctions_
 
-    def total_number_of_determiners(
-        SE: object
-        ) -> float:
+    def total_number_of_determiners(self) -> float:
         """
         returns the number of determiners
         """
         try: 
-            return SE.total_number_of_determiners_
+            return self.total_number_of_determiners_
         except AttributeError:
             pos_list = [token.pos_ for token in SE.doc]
-            SE.total_number_of_determiners_ = pos_list.count("DET")
-            return SE.total_number_of_determiners_
+            self.total_number_of_determiners_ = pos_list.count("DET")
+            return self.total_number_of_determiners_
 
-    def total_number_of_unique_determiners(
-        SE: object
-        ) -> float:
+    def total_number_of_unique_determiners(self) -> float:
         """
         returns the number of unique determiners
         """
         try: 
-            return SE.total_number_of_unique_determiners_
+            return self.total_number_of_unique_determiners_
         except AttributeError:
             pos_list = [token.lemma_ for token in SE.doc if token.pos_=="DET"]
-            SE.total_number_of_unique_determiners_ = len([*set(pos_list)])
-            return SE.total_number_of_unique_determiners_
+            self.total_number_of_unique_determiners_ = len([*set(pos_list)])
+            return self.total_number_of_unique_determiners_
 
-    def total_number_of_interjections(
-        SE: object
-        ) -> float:
+    def total_number_of_interjections(self) -> float:
         """
         returns the number of interjections
         """
         try: 
-            return SE.total_number_of_interjections_
+            return self.total_number_of_interjections_
         except AttributeError:
             pos_list = [token.pos_ for token in SE.doc]
-            SE.total_number_of_interjections_ = pos_list.count("INTJ")
-            return SE.total_number_of_interjections_
+            self.total_number_of_interjections_ = pos_list.count("INTJ")
+            return self.total_number_of_interjections_
 
-    def total_number_of_unique_interjections(
-        SE: object
-        ) -> float:
+    def total_number_of_unique_interjections(self) -> float:
         """
         returns the number of unique interjections
         """
         try: 
-            return SE.total_number_of_unique_interjections_
+            return self.total_number_of_unique_interjections_
         except AttributeError:
             pos_list = [token.lemma_ for token in SE.doc if token.pos_=="INTJ"]
-            SE.total_number_of_unique_interjections_ = len([*set(pos_list)])
-            return SE.total_number_of_unique_interjections_
+            self.total_number_of_unique_interjections_ = len([*set(pos_list)])
+            return self.total_number_of_unique_interjections_
 
-    def total_number_of_nouns(
-        SE: object
-        ) -> float:
+    def total_number_of_nouns(self) -> float:
         """
         returns the number of nouns
         """
         try: 
-            return SE.total_number_of_nouns_
+            return self.total_number_of_nouns_
         except AttributeError:
             pos_list = [token.pos_ for token in SE.doc]
-            SE.total_number_of_nouns_ = pos_list.count("NOUN")
-            return SE.total_number_of_nouns_
+            self.total_number_of_nouns_ = pos_list.count("NOUN")
+            return self.total_number_of_nouns_
 
-    def total_number_of_unique_nouns(
-        SE: object
-        ) -> float:
+    def total_number_of_unique_nouns(self) -> float:
         """
         returns the number of unique nouns
         """
         try: 
-            return SE.total_number_of_unique_nouns_
+            return self.total_number_of_unique_nouns_
         except AttributeError:
             pos_list = [token.lemma_ for token in SE.doc if token.pos_=="NOUN"]
-            SE.total_number_of_unique_nouns_ = len([*set(pos_list)])
-            return SE.total_number_of_unique_nouns_
+            self.total_number_of_unique_nouns_ = len([*set(pos_list)])
+            return self.total_number_of_unique_nouns_
 
-    def total_number_of_numerals(
-        SE: object
-        ) -> float:
+    def total_number_of_numerals(self) -> float:
         """
         returns the number of numerals
         """
         try: 
-            return SE.total_number_of_numerals_
+            return self.total_number_of_numerals_
         except AttributeError:
             pos_list = [token.pos_ for token in SE.doc]
-            SE.total_number_of_numerals_ = pos_list.count("NUM")
-            return SE.total_number_of_numerals_
+            self.total_number_of_numerals_ = pos_list.count("NUM")
+            return self.total_number_of_numerals_
 
-    def total_number_of_unique_numerals(
-        SE: object
-        ) -> float:
+    def total_number_of_unique_numerals(self) -> float:
         """
         returns the number of unique numerals
         """
         try: 
-            return SE.total_number_of_unique_numerals_
+            return self.total_number_of_unique_numerals_
         except AttributeError:
             pos_list = [token.lemma_ for token in SE.doc if token.pos_=="NUM"]
-            SE.total_number_of_unique_numerals_ = len([*set(pos_list)])
-            return SE.total_number_of_unique_numerals_
+            self.total_number_of_unique_numerals_ = len([*set(pos_list)])
+            return self.total_number_of_unique_numerals_
 
-    def total_number_of_particles(
-        SE: object
-        ) -> float:
+    def total_number_of_particles(self) -> float:
         """
         returns the number of particles
         """
         try: 
-            return SE.total_number_of_particles_
+            return self.total_number_of_particles_
         except AttributeError:
             pos_list = [token.pos_ for token in SE.doc]
-            SE.total_number_of_particles_ = pos_list.count("PART")
-            return SE.total_number_of_particles_
+            self.total_number_of_particles_ = pos_list.count("PART")
+            return self.total_number_of_particles_
 
-    def total_number_of_unique_particles(
-        SE: object
-        ) -> float:
+    def total_number_of_unique_particles(self) -> float:
         """
         returns the number of unique particles
         """
         try: 
-            return SE.total_number_of_unique_particles_
+            return self.total_number_of_unique_particles_
         except AttributeError:
             pos_list = [token.lemma_ for token in SE.doc if token.pos_=="PART"]
-            SE.total_number_of_unique_particles_ = len([*set(pos_list)])
-            return SE.total_number_of_unique_particles_
+            self.total_number_of_unique_particles_ = len([*set(pos_list)])
+            return self.total_number_of_unique_particles_
 
-    def total_number_of_pronouns(
-        SE: object
-        ) -> float:
+    def total_number_of_pronouns(self) -> float:
         """
         returns the number of pronouns
         """
         try: 
-            return SE.total_number_of_pronouns_
+            return self.total_number_of_pronouns_
         except AttributeError:
             pos_list = [token.pos_ for token in SE.doc]
-            SE.total_number_of_pronouns_ = pos_list.count("PRON")
-            return SE.total_number_of_pronouns_
+            self.total_number_of_pronouns_ = pos_list.count("PRON")
+            return self.total_number_of_pronouns_
 
-    def total_number_of_unique_pronouns(
-        SE: object
-        ) -> float:
+    def total_number_of_unique_pronouns(self) -> float:
         """
         returns the number of unique pronouns
         """
         try: 
-            return SE.total_number_of_unique_pronouns_
+            return self.total_number_of_unique_pronouns_
         except AttributeError:
             pos_list = [token.lemma_ for token in SE.doc if token.pos_=="PRON"]
-            SE.total_number_of_unique_pronouns_ = len([*set(pos_list)])
-            return SE.total_number_of_unique_pronouns_
+            self.total_number_of_unique_pronouns_ = len([*set(pos_list)])
+            return self.total_number_of_unique_pronouns_
 
-    def total_number_of_proper_nouns(
-        SE: object
-        ) -> float:
+    def total_number_of_proper_nouns(self) -> float:
         """
         returns the number of proper nouns
         """
         try: 
-            return SE.total_number_of_proper_nouns_
+            return self.total_number_of_proper_nouns_
         except AttributeError:
             pos_list = [token.pos_ for token in SE.doc]
-            SE.total_number_of_proper_nouns_ = pos_list.count("PROPN")
-            return SE.total_number_of_proper_nouns_
+            self.total_number_of_proper_nouns_ = pos_list.count("PROPN")
+            return self.total_number_of_proper_nouns_
 
-    def total_number_of_unique_proper_nouns(
-        SE: object
-        ) -> float:
+    def total_number_of_unique_proper_nouns(self) -> float:
         """
         returns the number of unique proper nouns
         """
         try: 
-            return SE.total_number_of_unique_proper_nouns_
+            return self.total_number_of_unique_proper_nouns_
         except AttributeError:
             pos_list = [token.lemma_ for token in SE.doc if token.pos_=="PROPN"]
-            SE.total_number_of_unique_proper_nouns_ = len([*set(pos_list)])
-            return SE.total_number_of_unique_proper_nouns_
+            self.total_number_of_unique_proper_nouns_ = len([*set(pos_list)])
+            return self.total_number_of_unique_proper_nouns_
 
-    def total_number_of_punctuations(
-        SE: object
-        ) -> float:
+    def total_number_of_punctuations(self) -> float:
         """
         returns the number of punctuations
         """
         try: 
-            return SE.total_number_of_punctuations_
+            return self.total_number_of_punctuations_
         except AttributeError:
             pos_list = [token.pos_ for token in SE.doc]
-            SE.total_number_of_punctuations_ = pos_list.count("PUNCT")
-            return SE.total_number_of_punctuations_
+            self.total_number_of_punctuations_ = pos_list.count("PUNCT")
+            return self.total_number_of_punctuations_
 
-    def total_number_of_unique_punctuations(
-        SE: object
-        ) -> float:
+    def total_number_of_unique_punctuations(self) -> float:
         """
         returns the number of unique punctuations
         """
         try: 
-            return SE.total_number_of_unique_punctuations_
+            return self.total_number_of_unique_punctuations_
         except AttributeError:
             pos_list = [token.lemma_ for token in SE.doc if token.pos_=="PUNCT"]
-            SE.total_number_of_unique_punctuations_ = len([*set(pos_list)])
-            return SE.total_number_of_unique_punctuations_
+            self.total_number_of_unique_punctuations_ = len([*set(pos_list)])
+            return self.total_number_of_unique_punctuations_
 
-    def total_number_of_subordinating_conjunctions(
-        SE: object
-        ) -> float:
+    def total_number_of_subordinating_conjunctions(self) -> float:
         """
         returns the number of subordinating conjunctions
         """
         try: 
-            return SE.total_number_of_subordinating_conjunctions_
+            return self.total_number_of_subordinating_conjunctions_
         except AttributeError:
             pos_list = [token.pos_ for token in SE.doc]
-            SE.total_number_of_subordinating_conjunctions_ = pos_list.count("SCONJ")
-            return SE.total_number_of_subordinating_conjunctions_
+            self.total_number_of_subordinating_conjunctions_ = pos_list.count("SCONJ")
+            return self.total_number_of_subordinating_conjunctions_
 
-    def total_number_of_unique_subordinating_conjunctions(
-        SE: object
-        ) -> float:
+    def total_number_of_unique_subordinating_conjunctions(self) -> float:
         """
         returns the number of unique subordinating conjunctions
         """
         try: 
-            return SE.total_number_of_unique_subordinating_conjunctions_
+            return self.total_number_of_unique_subordinating_conjunctions_
         except AttributeError:
             pos_list = [token.lemma_ for token in SE.doc if token.pos_=="SCONJ"]
-            SE.total_number_of_unique_subordinating_conjunctions_ = len([*set(pos_list)])
-            return SE.total_number_of_unique_subordinating_conjunctions_
+            self.total_number_of_unique_subordinating_conjunctions_ = len([*set(pos_list)])
+            return self.total_number_of_unique_subordinating_conjunctions_
 
-    def total_number_of_symbols(
-        SE: object
-        ) -> float:
+    def total_number_of_symbols(self) -> float:
         """
         returns the number of symbols
         """
         try: 
-            return SE.total_number_of_symbols_
+            return self.total_number_of_symbols_
         except AttributeError:
             pos_list = [token.pos_ for token in SE.doc]
-            SE.total_number_of_symbols_ = pos_list.count("SYM")
-            return SE.total_number_of_symbols_
+            self.total_number_of_symbols_ = pos_list.count("SYM")
+            return self.total_number_of_symbols_
 
-    def total_number_of_unique_symbols(
-        SE: object
-        ) -> float:
+    def total_number_of_unique_symbols(self) -> float:
         """
         returns the number of unique symbols
         """
         try: 
-            return SE.total_number_of_unique_symbols_
+            return self.total_number_of_unique_symbols_
         except AttributeError:
             pos_list = [token.lemma_ for token in SE.doc if token.pos_=="SYM"]
-            SE.total_number_of_unique_symbols_ = len([*set(pos_list)])
-            return SE.total_number_of_unique_symbols_
+            self.total_number_of_unique_symbols_ = len([*set(pos_list)])
+            return self.total_number_of_unique_symbols_
 
-    def total_number_of_verbs(
-        SE: object
-        ) -> float:
+    def total_number_of_verbs(self) -> float:
         """
         returns the number of verbs
         """
         try: 
-            return SE.total_number_of_verbs_
+            return self.total_number_of_verbs_
         except AttributeError:
             pos_list = [token.pos_ for token in SE.doc]
-            SE.total_number_of_verbs_ = pos_list.count("VERB")
-            return SE.total_number_of_verbs_
+            self.total_number_of_verbs_ = pos_list.count("VERB")
+            return self.total_number_of_verbs_
     
-    def total_number_of_unique_verbs(
-        SE: object
-        ) -> float:
+    def total_number_of_unique_verbs(self) -> float:
         """
         returns the number of unique verbs
         """
         try: 
-            return SE.total_number_of_unique_verbs_
+            return self.total_number_of_unique_verbs_
         except AttributeError:
             pos_list = [token.lemma_ for token in SE.doc if token.pos_=="VERB"]
-            SE.total_number_of_unique_verbs_ = len([*set(pos_list)])
-            return SE.total_number_of_unique_verbs_
+            self.total_number_of_unique_verbs_ = len([*set(pos_list)])
+            return self.total_number_of_unique_verbs_
 
-    def total_number_of_spaces(
-        SE: object
-        ) -> float:
+    def total_number_of_spaces(self) -> float:
         """
         returns the number of spaces
         """
         try: 
-            return SE.total_number_of_spaces_
+            return self.total_number_of_spaces_
         except AttributeError:
             pos_list = [token.pos_ for token in SE.doc]
-            SE.total_number_of_spaces_ = pos_list.count("SPACE")
-            return SE.total_number_of_spaces_
+            self.total_number_of_spaces_ = pos_list.count("SPACE")
+            return self.total_number_of_spaces_
 
-    def total_number_of_unique_spaces(
-        SE: object
-        ) -> float:
+    def total_number_of_unique_spaces(self) -> float:
         """
         returns the number of unique spaces
         """
         try: 
-            return SE.total_number_of_unique_spaces_
+            return self.total_number_of_unique_spaces_
         except AttributeError:
             pos_list = [token.lemma_ for token in SE.doc if token.pos_=="SPACE"]
-            SE.total_number_of_unique_spaces_ = len([*set(pos_list)])
-            return SE.total_number_of_unique_spaces_
+            self.total_number_of_unique_spaces_ = len([*set(pos_list)])
+            return self.total_number_of_unique_spaces_
